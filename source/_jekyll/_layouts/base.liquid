@@ -120,7 +120,7 @@
         <div class="col-md-5">
           <h4>{{ page.target }}</h4>
           <h3>{{ site.data.i18n.makeoffer[page.language] }}</h3>
-          <form class="my-4">
+          <form name="offer" method="POST" class="my-4" data-netlify="true">
             <div class="form-group">
               <label for="name">{{ site.data.i18n.name[page.language] }}</label>
               <input type="text" class="form-control" id="name">
