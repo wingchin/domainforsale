@@ -1,0 +1,32 @@
+# =============================================
+# Language metadata
+# =============================================
+
+# WORDS
+domain:
+  en:       domain
+  nl:       domein
+forsale:
+  en:       for sale
+  nl:       te koop
+domainforsale:
+  en:       This domain is for sale!
+  nl:       Dit domein is te koop!
+endofsale:
+  en:       Sale will end in
+  nl:       Verkoop eindigt over
+makeoffer:
+  en:       Make an offer
+  nl:       Doe een bod
+name:
+  en:       Your name
+  nl:       Jouw naam
+email:
+  en:       Your e-mail address
+  nl:       Jouw e-mailadres
+offer:
+  en:       Your offer
+  nl:       Jouw bod
+sendoffer:
+  en:       Send my offer
+  nl:       Verstuur mijn bod

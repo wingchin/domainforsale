@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="{{ page.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Wing">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <!--Seo Tags-->
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="robots" content="index, follow">
+
+    <title>{{ site.data.i18n.domain[page.language] | capitalize }} {{ page.domain }} {{ site.data.i18n.forsale[page.language] }}</title>
+
+    <link rel="canonical" href="https://{{ page.domain }}">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/css/jquery.countdown.min.css">
+
+    <style>
+      body {
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .6)
+          ), url('assets/images/{{ page.handle }}.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 60px;
+        font-weight: 900;
+      }
+      h3 {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      /* Countdown */
+      .is-countdown {
+        background-color: transparent;
+        border: none;
+      }
+      .countdown-section {
+        text-align: left;
+        margin-bottom: 45px;
+      }
+      .countdown-amount {
+        font-size: 40px;
+      }
+
+      /* Form */
+      .form-control {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+      }
+
+      /* Media queries */
+      @media (max-width: 575px) {
+        h1, h2 {
+          font-size: 34px;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 991px) {
+        h1, h2 {
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 767px) {
+        .container {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+      @media (min-width: 768px) {
+        html, body {
+          height: 100%;
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        h1, h2 {
+          font-size: 50px;
+        }
+      }
+      @media (min-width: 992px) {
+        .countdown-amount {
+          font-size: 62px;
+        }
+        p {
+          padding-right: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container d-md-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-7">
+          <h1>{{ site.data.i18n.domainforsale[page.language] }}</h1>
+          <h2>{{ page.domain }}</h2>
+          <p class="font-italic">{{ page.definition }}</p>
+          <h4>{{ site.data.i18n.endofsale[page.language] }}:</h4>
+          <div id="countdown"></div>
+        </div>
+        <div class="col-md-5">
+          <h4>{{ page.target }}</h4>
+          <h3>{{ site.data.i18n.makeoffer[page.language] }}</h3>
+          <form class="my-4">
+            <div class="form-group">
+              <label for="name">{{ site.data.i18n.name[page.language] }}</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">{{ site.data.i18n.email[page.language] }}</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="offer">{{ site.data.i18n.offer[page.language] }}</label>
+              <input type="text" class="form-control" id="offer">
+            </div>
+            <button type="submit" class="btn btn-light">{{ site.data.i18n.sendoffer[page.language] }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
+    {% if page.language == 'nl' %}<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-nl.min.js"></script>{% endif %}
+    <script type="text/javascript">
+      $('#countdown').countdown({
+        until: new Date({{ page.untildate }}),
+        padZeroes: true
+      });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ page.ga }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ page.ga }}');
+    </script>
+  </body>
+</html>
