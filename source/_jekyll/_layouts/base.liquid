@@ -120,18 +120,18 @@
         <div class="col-md-5">
           <h4>{{ page.target }}</h4>
           <h3>{{ site.data.i18n.makeoffer[page.language] }}</h3>
-          <form name="offer" method="POST" class="my-4" data-netlify="true">
+          <form naction="https://formspree.io/wingyukchin@gmail.com" method="POST" class="my-4">
             <div class="form-group">
               <label for="name">{{ site.data.i18n.name[page.language] }}</label>
-              <input type="text" class="form-control" id="name">
+              <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
               <label for="email">{{ site.data.i18n.email[page.language] }}</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control" id="email" name="email">
             </div>
             <div class="form-group">
               <label for="offer">{{ site.data.i18n.offer[page.language] }}</label>
-              <input type="text" class="form-control" id="offer">
+              <input type="text" class="form-control" id="offer" name="offer">
             </div>
             <button type="submit" class="btn btn-light">{{ site.data.i18n.sendoffer[page.language] }}</button>
           </form>
