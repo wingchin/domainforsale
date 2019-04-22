@@ -1,0 +1,18 @@
+{
+  "name": "domainforsale",
+  "version": "1.0.0",
+  "description": "Landing page generator for domain sales",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://wingchin@github.com/wingchin/domainforsale.git"
+  },
+  "author": "Wing",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gulp": "^4.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-netlify": "^1.1.0",
+    "gulp-surge": "^0.1.3"
+  }
+}
