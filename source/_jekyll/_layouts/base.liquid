@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="{{ page.language }}">
+
+  <!-- Head
+  =================================== -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Wing">
     <meta name="generator" content="Jekyll v3.8.5">
 
-    <!--Seo Tags-->
+    <!-- seo tags -->
     <meta name="description" content="{{ page.description }}">
     <meta name="keywords" content="{{ page.keywords }}">
     <meta name="robots" content="index, follow">
@@ -15,7 +18,7 @@
 
     <link rel="canonical" href="https://{{ page.domain }}">
 
-    <!-- Bootstrap core CSS -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/css/jquery.countdown.min.css">
 
@@ -105,40 +108,50 @@
         }
       }
     </style>
+
+    <!-- favicon -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   </head>
   <body>
 
-    <div class="container d-md-flex h-100">
-      <div class="row justify-content-center align-self-center">
-        <div class="col-md-7">
-          <h1>{{ site.data.i18n.domainforsale[page.language] }}</h1>
-          <h2>{{ page.domain }}</h2>
-          <p class="font-italic">{{ page.definition }}</p>
-          <h4>{{ site.data.i18n.endofsale[page.language] }}:</h4>
-          <div id="countdown"></div>
-        </div>
-        <div class="col-md-5">
-          <h4>{{ page.target }}</h4>
-          <h3>{{ site.data.i18n.makeoffer[page.language] }}</h3>
-          <form naction="https://formspree.io/wingyukchin@gmail.com" method="POST" class="my-4">
-            <div class="form-group">
-              <label for="name">{{ site.data.i18n.name[page.language] }}</label>
-              <input type="text" class="form-control" id="name" name="name">
-            </div>
-            <div class="form-group">
-              <label for="email">{{ site.data.i18n.email[page.language] }}</label>
-              <input type="email" class="form-control" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="offer">{{ site.data.i18n.offer[page.language] }}</label>
-              <input type="text" class="form-control" id="offer" name="offer">
-            </div>
-            <button type="submit" class="btn btn-light">{{ site.data.i18n.sendoffer[page.language] }}</button>
-          </form>
+    <!-- Content
+    =================================== -->
+    <main role="main">
+      <div class="container d-md-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-md-7">
+            <h1>{{ site.data.i18n.domainforsale[page.language] }}</h1>
+            <h2>{{ page.domain }}</h2>
+            <p class="font-italic">{{ page.definition }}</p>
+            <h4>{{ site.data.i18n.endofsale[page.language] }}:</h4>
+            <div id="countdown"></div>
+          </div>
+          <div class="col-md-5">
+            <h4>{{ page.target }}</h4>
+            <h3>{{ site.data.i18n.makeoffer[page.language] }}</h3>
+            <form naction="https://formspree.io/wingyukchin@gmail.com" method="POST" class="my-4">
+              <div class="form-group">
+                <label for="name">{{ site.data.i18n.name[page.language] }}</label>
+                <input type="text" class="form-control" id="name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="email">{{ site.data.i18n.email[page.language] }}</label>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="offer">{{ site.data.i18n.offer[page.language] }}</label>
+                <input type="text" class="form-control" id="offer" name="offer">
+              </div>
+              <button type="submit" class="btn btn-light">{{ site.data.i18n.sendoffer[page.language] }}</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
+    <!-- Foot
+    =================================== -->
+    <!-- scripts -->
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
@@ -150,7 +163,6 @@
       });
     </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ page.ga }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
